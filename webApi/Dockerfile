@@ -22,4 +22,4 @@ RUN dotnet publish "./webApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WEBAPI.dll"]
+ENTRYPOINT ["dotnet", "webApi.dll"]
